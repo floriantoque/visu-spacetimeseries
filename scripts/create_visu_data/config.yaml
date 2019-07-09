@@ -1,0 +1,25 @@
+# Config yaml file for script create_dates_residues
+obs_path: '../../data/clean_data/obs_mtl.csv'
+preds_path: ['../../data/clean_data/pred_rf1.csv',
+              '../../data/clean_data/pred_rf2.csv',
+             '../../data/clean_data/pred_rf4.csv']
+models_name: ['rf1', 'rf2', 'rf4']
+  
+agg_function: [utils.agg_max, utils.agg_min, utils.agg_maxabs_sign_at_1, utils.agg_maxabs_sign_at_4]
+agg_function_name: ['agg_max', 'agg_min', 'agg_maxabs_sign_at_1', 'agg_maxabs_sign_at_4']
+
+norm_function: [utils.norm_allcolumns_allrows, utils.norm_allcolumns_perday, utils.norm_percolumn_allrows,
+                 utils.norm_percolumn_perday]
+norm_function_name: ['norm_allstop_allperiod', 'norm_allstop_perday',
+                      'norm_perstop_allperiod', 'norm_perstop_perday']
+
+norm_year_function: [utils.norm_allcolumns_allrows, utils.norm_percolumn_allrows, utils.norm_allcolumns_perrow]
+norm_year_function_name: ['norm_allstop_allday', 'norm_perstop_allday', 'norm_allstop_perday']
+
+index_: 'Datetime'
+
+json_path: '../../dashboards/data/json/'
+csv_path: '../../dashboards/data/csv/'
+
+events_path: ['../../data/clean_data/events_2015_2018_filtered.csv', '../../data/clean_data/incidents.csv']
+events_name: ['events', 'incidents']
