@@ -15,8 +15,8 @@ const normYearFunctionName = ['norm_allstop_perday', 'norm_perstop_allday','norm
 const normYearFunctionNameTooltip = `<b>norm_allstop_perday: </b>Per year, normalize per the maximum value of all stop per day (Column normalization)
 																		 <br><b>norm_perstop_allday: </b>Per year, normalize per the maximum value of all day per stop (Row normalization)
 																		 <br><b>norm_allstop_allday: </b>Per year, normalize per the maximum value of all stop and all day (Year normalization)`
-const jsonPath = '/data/json/';
-const csvPath = '/data/csv/';
+const jsonPath = 'data/json/';
+const csvPath = 'data/csv/';
 
 const fileStop = "stop_info.csv";
 const fileEvents = ["events.json", "incidents.json"];
